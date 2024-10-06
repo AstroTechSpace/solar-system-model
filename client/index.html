@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="bot" id="bot">
+        <img class="start" id="start-button" src="img/play.svg" />
+        <img class="valli" src="img/valli.png" alt="" srcset="">
+        <div class="info-valli">
+            <p class="text-one">Привет, пользователь! Я Валли, возможно, ты уже знаком со мной. Я здесь, чтобы помочь тебе разобраться с навигацией на этом сайте. Начнём!</p>
+            <p class="text-one">Нажми на кнопку "Play", чтобы запустить анимацию, и наведи курсор на планеты, чтобы увидеть дополнительную информацию.</p>
+        </div>
+    </div>
+
+    <div class="back">
+        <img class="pause" id="pause-button" src="img/pause.svg" />
+        <img class="close hidden" id="close" src="img/close.svg" />
+        <div class="gradient">
+            <div class="sun" id="sun">
+                <div class="mercury" id="mercury"></div>
+                <div class="venus" id="venus"></div>
+                <div class="earth" id="earth">
+                    <div class="moon" id="moon"></div>
+                </div>
+                <div class="mars" id="mars"></div>
+                <div class="jupiter" id="jupiter"></div>
+                <div class="saturn" id="saturn">
+                    <div class="ring"></div>
+                </div>
+                <div class="uranus" id="uranus"></div>
+                <div class="neptune" id="neptune"></div>
+            </div>
+
+            <div class="trajectory-mercury"></div>
+            <div class="trajectory-venus"></div>
+            <div class="trajectory-earth"></div>
+            <div class="trajectory-mars"></div>
+            <div class="trajectory-jupiter"></div>
+            <div class="trajectory-saturn"></div>
+            <div class="trajectory-uranus"></div>
+            <div class="trajectory-neptune"></div>
+
+            <div class="bgT hidden" id="bgT">
+                <div class="container hidden" id="info">
+                    <div class="earth-img">
+                        <img class="earth-large" src="img/earthLarge.jpg">
+                        <div class="infoEarth">
+                            <p class="text-one">Земля</p>
+                            <p class="text-two">Земля — третья планета от Солнца, самая плотная и крупнейшая среди планет земной группы (Меркурий, Венера, Марс). Это единственное известное человеку тело во Вселенной, населенное живыми организмами. Земля образовалась около 4,54 млрд лет назад, и вскоре у нее появился естественный спутник — Луна.</p>
+                            <p class="text-two">Жизнь, предположительно, возникла на Земле около 4,25 млрд лет назад. Биосфера изменила атмосферу, создала озоновый слой, который вместе с магнитным полем защищает Землю от солнечной радиации. 70,8% поверхности занимает Мировой океан, а остальные — континенты и острова. Вода, необходимая для жизни, существует только на Земле.</p>
+                            <p class="text-two">Земля имеет активную внутреннюю структуру: мантия, жидкое внешнее ядро и твердое внутреннее ядро. Планета взаимодействует с другими объектами в космосе, включая Луну и Солнце. Земля совершает оборот вокруг Солнца за 365,26 суток, наклон оси вращения в 23,44° вызывает смену сезонов. Луна стабилизирует ось и вызывает приливы.</p>
+                            <p class="text-two">Человечество разделило Землю на 193 страны-члена ООН и несколько других политических образований.</p>
+                        </div>
+                    </div>
+                    <div class="moon-large">
+                        <div class="moon-info">
+                            <p class="text-one">Луна</p>
+                            <p class="text-two">Луна — единственный естественный спутник Земли. Самый близкий к Солнцу спутник планеты, так как у ближайших к Солнцу планет (Меркурия и Венеры) их нет. Второй по яркости объект на земном небосводе после Солнца и пятый по величине естественный спутник планеты Солнечной системы. Среднее расстояние между центрами Земли и Луны — 384 467 км (0,00257 а.е., ~30 диаметров Земли).</p>
+                            <p class="text-two">Луна появилась около 4,5 млрд лет назад, немного позже Земли. Наиболее популярна гипотеза о том, что Луна сформировалась из осколков, оставшихся после «Гигантского столкновения» Земли и Тейи — планеты, схожей по размерам с Марсом.</p>
+                            <p class="text-two">На сегодняшний день Луна является единственным внеземным астрономическим объектом, на котором побывал человек.</p>
+                        </div>
+                    </div>
+                    <div class="asteroidBennu">
+                        <div class="infoBennu">
+                            <p class="text-one">Астероид (101955) Бенну</p>
+                            <p class="text-two">(101955) Бе́нну (лат. Bennu; первоначально — 1999 RQ36) — небольшой околоземный астероид из группы аполлонов. Открыт в рамках проекта по поиску астероидов LINEAR в обсерватории Сокорро и 25 апреля 2013 года был назван в честь древнеегипетского божества — птицы Бенну, символа воскресения Осириса.</p>
+                            <p class="text-two">По результатам первоначальных расчётов на 100 лет вперёд, шансы на столкновение с Землёй были очень малы. Группа учёных под руководством Оскара Арратии (исп. Oscar Arratia) из Вальядолидского университета произвели повторные, более точные расчёты, учитывающие, в том числе, эффект Ярковского. По их данным, вероятность падения астероида на Землю равна 1⁄4000, а дата возможного падения находится в рамках 2169 и 2199 года[8][9]. При падении на Землю его скорость составит 12,86 км/с. НАСА назвала этот астероид наиболее потенциально опасным для Земли объектом.</p>
+                        </div>
+                    </div>
+                    <div class="asteroid1950">
+                        <div class="info1950">
+                            <p class="text-one">Астероид (29075) 1950 DA</p>
+                            <p class="text-two">Астероид (29075) 1950 DA — околоземный астероид из группы аполлонов, пересекающий орбиты Земли и Марса. Он был открыт В 22 февраля 1950 года астрономом Карлом Виртаненом в Ликской обсерватории. На данный момент считается одним из наиболее опасных для Земли астероидов. Вероятность его столкновения с Землёй 16 марта 2880 года составляет 1 к 300, но это, скорее всего, обусловлено погрешностями наблюдений. В случае удара последствия будут катастрофическими, с изменениями в биосфере и климата планеты.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isPaused = false;
+
+        const start = document.getElementById('start-button');
+        const pauseButton = document.getElementById('pause-button');
+        let bot = document.getElementById('bot');
+
+        start.addEventListener('click', () => {
+            isPaused = !isPaused;
+            pauseButton.src = isPaused ? 'img/play.svg' : 'img/pause.svg';
+            bot.style.display = 'none'
+        });
+
+        pauseButton.addEventListener('click', () => {
+            isPaused = !isPaused;
+            pauseButton.src = isPaused ? 'img/play.svg' : 'img/pause.svg';
+        });
+
+        setTimeout(() => {
+            isPaused = true;
+            pauseButton.src = 'img/play.svg'
+        }, 10);
+
+        const infoDiv = document.getElementById('info');
+
+        // Анимация для Меркурия
+        const mercury = document.getElementById('mercury');
+        const mercuryRadiusX = 190;
+        const mercuryRadiusY = 65;
+        const mercuryCenterX = 43;
+        const mercuryCenterY = 45;
+        let mercuryAngle = Math.random() * 2 * Math.PI;
+
+        function animateMercury() {
+            if (!isPaused) {
+                mercuryAngle -= 0.02;
+                const x = mercuryCenterX + mercuryRadiusX * Math.cos(mercuryAngle);
+                const y = mercuryCenterY + mercuryRadiusY * Math.sin(mercuryAngle);
+
+                mercury.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateMercury);
+        }
+
+        animateMercury();
+
+        // Анимация для Венеры
+        const venus = document.getElementById('venus');
+        const venusRadiusX = 240;
+        const venusRadiusY = 92;
+        const venusCenterX = 35;
+        const venusCenterY = 38;
+        let venusAngle = Math.random() * 2 * Math.PI;
+
+        function animateVenus() {
+            if (!isPaused) {
+                venusAngle -= 0.01;
+                const x = venusCenterX + venusRadiusX * Math.cos(venusAngle);
+                const y = venusCenterY + venusRadiusY * Math.sin(venusAngle);
+
+                venus.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateVenus);
+        }
+
+        animateVenus();
+
+        // Анимация для Земли
+        const earth = document.getElementById('earth');
+        const earthRadiusX = 290;
+        const earthRadiusY = 125;
+        const earthCenterX = 35;
+        const earthCenterY = 35;
+        let earthAngle = Math.random() * 2 * Math.PI;
+
+        function animateEarth() {
+            if (!isPaused) {
+                earthAngle -= 0.008;
+                const x = earthCenterX + earthRadiusX * Math.cos(earthAngle);
+                const y = earthCenterY + earthRadiusY * Math.sin(earthAngle);
+
+                earth.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateEarth);
+        }
+
+        animateEarth();
+
+        let bgT = document.getElementById('bgT');
+        let close = document.getElementById('close');
+
+        earth.addEventListener('mouseenter', () => {
+            isPaused = true;
+            pauseButton.style.display = 'none'
+            earth.style.transform += ' scale(1.5)';
+            bgT.classList.remove('hidden', 'hide');
+            bgT.classList.add('show');
+            close.classList.remove('hidden', 'hide');
+            close.classList.add('show');
+            infoDiv.classList.remove('hidden', 'hide');
+            infoDiv.classList.add('show');
+        });
+
+        close.addEventListener('click', () => {
+            close.classList.add('hide');
+            infoDiv.classList.add('hide');
+            bgT.classList.add('hide');
+
+            setTimeout(() => {
+                infoDiv.classList.remove('show');
+                infoDiv.classList.add('hidden');
+                close.classList.remove('show');
+                close.classList.add('hidden');
+                bgT.classList.remove('show');
+                bgT.classList.add('hidden');
+                pauseButton.style.display = 'block'
+            }, 800);
+
+            earth.style.transform = earth.style.transform.replace(/ scale\(1\.5\)/, '');
+        });
+
+        // Анимация для Луны
+        const moon = document.getElementById('moon');
+        const moonRadiusX = 22;
+        const moonRadiusY = 22;
+        const moonCenterX = 9;
+        const moonCenterY = 10;
+        let moonAngle = Math.random() * 2 * Math.PI;
+
+        function animateMoon() {
+            if (!isPaused) {
+                moonAngle -= 0.1;
+                const x = moonCenterX + moonRadiusX * Math.cos(moonAngle);
+                const y = moonCenterY + moonRadiusY * Math.sin(moonAngle);
+
+                moon.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateMoon);
+        }
+
+        animateMoon();
+
+        // Анимация для Марса
+        const mars = document.getElementById('mars');
+        const marsRadiusX = 340;
+        const marsRadiusY = 150;
+        const marsCenterX = 40;
+        const marsCenterY = 40;
+        let marsAngle = Math.random() * 2 * Math.PI;
+
+        function animateMars() {
+            if (!isPaused) {
+                marsAngle -= 0.006;
+                const x = marsCenterX + marsRadiusX * Math.cos(marsAngle);
+                const y = marsCenterY + marsRadiusY * Math.sin(marsAngle);
+
+                mars.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateMars);
+        }
+
+        animateMars();
+
+        // Анимация для Юпитера
+        const jupiter = document.getElementById('jupiter');
+        const jupiterRadiusX = 395;
+        const jupiterRadiusY = 180;
+        const jupiterCenterX = 28;
+        const jupiterCenterY = 30;
+        let jupiterAngle = Math.random() * 2 * Math.PI;
+
+        function animateJupiter() {
+            if (!isPaused) {
+                jupiterAngle -= 0.003;
+                const x = jupiterCenterX + jupiterRadiusX * Math.cos(jupiterAngle);
+                const y = jupiterCenterY + jupiterRadiusY * Math.sin(jupiterAngle);
+
+                jupiter.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateJupiter);
+        }
+
+        animateJupiter();
+
+        // Анимация для Сатурна
+        const saturn = document.getElementById('saturn');
+        const saturnRadiusX = 475;
+        const saturnRadiusY = 235;
+        const saturnCenterX = 35;
+        const saturnCenterY = 35;
+        let saturnAngle = Math.random() * 2 * Math.PI;
+
+        function animateSaturn() {
+            if (!isPaused) {
+                saturnAngle -= 0.001;
+                const x = saturnCenterX + saturnRadiusX * Math.cos(saturnAngle);
+                const y = saturnCenterY + saturnRadiusY * Math.sin(saturnAngle);
+
+                saturn.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateSaturn);
+        }
+
+        animateSaturn();
+
+        // Анимация для Урана
+        const uranus = document.getElementById('uranus');
+        const uranusRadiusX = 545;
+        const uranusRadiusY = 285;
+        const uranusCenterX = 35;
+        const uranusCenterY = 35;
+        let uranusAngle = Math.random() * 2 * Math.PI;
+
+        function animateUranus() {
+            if (!isPaused) {
+                uranusAngle -= 0.0006;
+                const x = uranusCenterX + uranusRadiusX * Math.cos(uranusAngle);
+                const y = uranusCenterY + uranusRadiusY * Math.sin(uranusAngle);
+
+                uranus.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(animateUranus);
+        }
+
+        animateUranus();
+
+        // Анимация для Нептуна
+        let neptuneScale = 1;
+        const neptune = document.getElementById('neptune');
+        const neptuneRadiusX = 600;
+        const neptuneRadiusY = 325;
+        const neptuneCenterX = 38;
+        const neptuneCenterY = 38;
+        let neptuneAngle = Math.random() * 2 * Math.PI;
+
+        function animateNeptune() {
+            if (!isPaused) {
+                neptuneAngle -= 0.0003;
+                const x = neptuneCenterX + neptuneRadiusX * Math.cos(neptuneAngle);
+                const y = neptuneCenterY + neptuneRadiusY * Math.sin(neptuneAngle);
+
+                neptune.style.transform = `translate(${x}px, ${y}px) scale(${neptuneScale})`;
+            }
+
+            requestAnimationFrame(animateNeptune);
+        }
+
+        animateNeptune();
+    </script>
+
+</body>
+
+</html>

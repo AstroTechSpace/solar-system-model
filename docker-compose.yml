@@ -28,18 +28,6 @@ services:
     networks:
       - solary-system
 
-  nginx:
-    image: nginx:latest
-    ports:
-      - "80:80"
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./client:/usr/share/nginx/html
-    depends_on:
-      - ssb
-    networks:
-      - solary-system
-
 networks:
   solary-system:
     driver: bridge

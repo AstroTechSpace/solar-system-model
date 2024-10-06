@@ -4,7 +4,7 @@ FROM python:3.12-alpine
 RUN apk --no-cache add gcc musl-dev libffi-dev openssl-dev
 
 # Устанавливаем рабочую директорию
-WORKDIR /app
+WORKDIR ${PROJECT_DIR}
 
 # Копируем requirements.txt и устанавливаем зависимости
 COPY requirements.txt .
@@ -17,13 +17,13 @@ COPY .env.example .env
 ENV DJANGO_PORT=8000 \
     DJANGO_HOST=localhost \
     ENVIROMENT=development \
-    CORS_ALLOWED_ORIGINS=http://87.236.23.222 \
+    CORS_ALLOWED_ORIGINS=http://87.236.23.222,http:astrotech-appspace.space, \
     PROJECT_DIR=/app \
     DJANGO_SECRET_KEY=python3manage.pyrunserver
 
 RUN python3 manage.py collectstatic --no-input
 
-RUN chmod 700 -R /app
+RUN chmod 700 -R scripts
 
 EXPOSE ${DJANGO_PORT}
 

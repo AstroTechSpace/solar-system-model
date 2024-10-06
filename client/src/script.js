@@ -382,6 +382,10 @@ function loadAsteroids(path, numberOfAsteroids, minOrbitRadius, maxOrbitRadius) 
                   child.receiveShadow = true;
                   asteroid.position.set(x, y, z);
                   asteroid.scale.setScalar(THREE.MathUtils.randFloat(0.8, 1.2));
+                  const scaleX = THREE.MathUtils.randFloat(0.1, 2);
+                  const scaleY = THREE.MathUtils.randFloat(0.2, 2);
+                  const scaleZ = THREE.MathUtils.randFloat(0.3, 2);
+                  asteroid.scale.set(scaleX, scaleY, scaleZ);
                   scene.add(asteroid);
                   asteroids.push(asteroid);
               }
@@ -440,7 +444,7 @@ const earthMoon = [{
   texture: earthMoonTexture,
   bump: earthMoonBump,
   orbitSpeed: 0.001 * settings.accelerationOrbit,
-  orbitRadius: 10
+  orbitRadius: 18
 }]
 
 // Mars' moons with path to 3D models (phobos & deimos)
@@ -468,25 +472,25 @@ const jupiterMoons = [
   {
     size: 1.6,
     texture: ioTexture,
-    orbitRadius: 20,
+    orbitRadius: 32,
     orbitSpeed: 0.0005 * settings.accelerationOrbit
   },
   {
     size: 1.4,
     texture: europaTexture,
-    orbitRadius: 24,
+    orbitRadius: 34,
     orbitSpeed: 0.00025 * settings.accelerationOrbit
   },
   {
     size: 2,
     texture: ganymedeTexture,
-    orbitRadius: 28,
+    orbitRadius: 40,
     orbitSpeed: 0.000125 * settings.accelerationOrbit
   },
   {
     size: 1.7,
     texture: callistoTexture,
-    orbitRadius: 32,
+    orbitRadius: 36,
     orbitSpeed: 0.00006 * settings.accelerationOrbit
   }
 ];
@@ -510,19 +514,19 @@ marsMoons.forEach(moon => {
   });
 });
 
-const jupiter = new createPlanet('Jupiter', 69/4, 778, 3, jupiterTexture, null, null, null, jupiterMoons);
-const saturn = new createPlanet('Saturn', 58/4, 1430, 26, saturnTexture, null, {
-  innerRadius: 18, 
-  outerRadius: 29, 
+const jupiter = new createPlanet('Jupiter', 69/2, 778, 3, jupiterTexture, null, null, null, jupiterMoons);
+const saturn = new createPlanet('Saturn', 58/2, 1430, 26, saturnTexture, null, {
+  innerRadius: 45, 
+  outerRadius: 70, 
   texture: satRingTexture
 });
-const uranus = new createPlanet('Uranus', 25/4, 2870, 82, uranusTexture, null, {
-  innerRadius: 6, 
-  outerRadius: 8, 
+const uranus = new createPlanet('Uranus', 25/1, 2870, 82, uranusTexture, null, {
+  innerRadius: 30, 
+  outerRadius: 40, 
   texture: uraRingTexture
 });
-const neptune = new createPlanet('Neptune', 24/4, 4500, 28, neptuneTexture);
-const pluto = new createPlanet('Pluto', 1, 350, 6000, plutoTexture)
+const neptune = new createPlanet('Neptune', 24/1, 4500, 28, neptuneTexture);
+const pluto = new createPlanet('Pluto', 10, 6000, 1, plutoTexture)
 
   // ******  PLANETS DATA  ******
   const planetData = {
@@ -767,7 +771,7 @@ if (isMovingTowardsPlanet) {
 
   }
 } else if (isZoomingOut) {
-  camera.position.lerp(zoomOutTargetPosition, 0.05);
+  camera.position.lerp(zoomOutTargetPosition, 0.5);
 
   if (camera.position.distanceTo(zoomOutTargetPosition) < 1) {
       isZoomingOut = false;
@@ -778,8 +782,8 @@ if (isMovingTowardsPlanet) {
   requestAnimationFrame(animate);
   composer.render();
 }
-loadAsteroids('/asteroids/asteroidPack.glb', 1000, 180, 200);
-loadAsteroids('/asteroids/asteroidPack.glb', 3000, 4800, 5800);
+loadAsteroids('/asteroids/asteroidPack.glb', 1000, 250, 280);
+loadAsteroids('/asteroids/asteroidPack.glb', 10000, 6000, 6200);
 animate();
 
 window.addEventListener('mousemove', onMouseMove, false);

@@ -5,21 +5,51 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./server:/app/server
-    ports:
-      - "8000:8000"
+    environment:
+      DJANGO_PORT: 8000
+      DJANGO_HOST: ssb
+      ENVIRONMENT: production
+      CORS_ALLOWED_ORIGINS: https://astrotech-spaceapp.space
+      PROJECT_DIR: /app
+      DJANGO_SECRET_KEY: your-secret-key
     networks:
       - solary-system
 
   nginx:
     image: nginx:latest
-    container_name: ss-nginx
     ports:
       - "80:80"
       - "443:443"
     volumes:
-      - ./server/nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./client/nginx/default.conf:/etc/nginx/conf.d/client.conf 
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./client:/usr/share/nginx/html
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      - ssb
+    networks:
+      - solary-system
+
+  certbot:
+    image: certbot/certbot:latest
+    container_name: certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew --webroot -w /var/www/certbot --quiet --renew-hook \"nginx -s reload\"; sleep 12h & wait $${!}; done;'"
+    depends_on:
+      - nginx
+    networks:
+      - solary-system
+
+  init-certbot:
+    image: certbot/certbot:latest
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: "/bin/sh -c 'certbot certonly --webroot -w /var/www/certbot -d astrotech-spaceapp.space --email your-email@example.com --agree-tos --no-eff-email'"
+    depends_on:
+      - nginx
     networks:
       - solary-system
 

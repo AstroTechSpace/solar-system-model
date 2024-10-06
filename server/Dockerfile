@@ -14,7 +14,7 @@ COPY . .
 
 COPY .env.example .env
 
-ENV DJANGO_PORT=7000 \
+ENV DJANGO_PORT=8000 \
     DJANGO_HOST=localhost \
     ENVIROMENT=development \
     CORS_ALLOWED_ORIGINS=http://87.236.23.222 \

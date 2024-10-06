@@ -9,33 +9,42 @@ body {
 .bot {
     width: 100%;
     height: 100%;
-    background-color: rgba(40, 41, 42, 0.5);
+    background-color: rgba(40, 41, 42, 0.6);
     background-position: center;
     position: relative;
     z-index: 500;
 }
 
-.start{
+.start {
     cursor: pointer;
     top: 3%;
-    left: 95%;  
+    left: 95%;
+    width: 3%;
+    position: absolute;
+    z-index: 600;
+    animation: fadeIn 0.8s forwards;
+}
+.start1 {
+    cursor: pointer;
+    top: 3%;
+    left: 90%;
     width: 3%;
     position: absolute;
     z-index: 600;
     animation: fadeIn 0.8s forwards;
 }
 
-.pause{
+.pause {
     cursor: pointer;
     top: 3%;
-    left: 95%;  
+    left: 95%;
     width: 3%;
     position: absolute;
     z-index: 102;
     animation: fadeIn 0.8s forwards;
 }
 
-.valli{
+.valli {
     width: 10%;
     height: auto;
     top: 73%;
@@ -45,7 +54,7 @@ body {
 }
 
 .info-valli {
-    top: 22%;
+    top: 38%;
     left: 65%;
     position: absolute;
     width: 25%;
@@ -53,7 +62,7 @@ body {
     height: auto;
     border: 2px solid gray;
     border-radius: 20px;
-    background-color: rgba(40, 41, 42, 0.5);
+    background-color: rgba(40, 41, 42, 0.6);
     animation: fadeIn 0.8s forwards;
     pointer-events: none;
 }
@@ -248,7 +257,135 @@ body {
     height: 95%;
     padding: 20px;
     position: absolute;
-    background-image: url('img/bg.jpg');
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container1 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container2 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container3 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container4 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container5 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container6 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container7 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background-position: center;
+    display: none;
+    z-index: 80;
+}
+
+.container8 {
+    top: 1%;
+    left: 1%;
+    width: 96.5%;
+    height: 95%;
+    padding: 20px;
+    position: absolute;
+    background-image: url('img/bg1.jpg');
     padding: 10px;
     border-radius: 10px;
     border: 2px solid gray;
@@ -353,24 +490,21 @@ body {
 .asteroidBennu {
     top: -70%;
     left: 90%;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background-image: url('img/bennu.png');
     background-position: center;
     background-size: cover;
     border-radius: 50%;
     position: relative;
-    box-shadow:
-        10px -10px 20px rgba(255, 255, 255, 0.5);
-    z-index: 10;
     cursor: pointer;
 }
 
 .infoBennu {
     position: absolute;
-    top: 5%;
-    left: -1100%;
-    width: 1000%;
+    top: 10%;
+    left: -850%;
+    width: 800%;
     height: auto;
     border: 2px solid gray;
     border-radius: 20px;
@@ -381,7 +515,7 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    z-index: 11;
+    z-index: 300;
 }
 
 .asteroidBennu:hover .infoBennu {
@@ -389,26 +523,24 @@ body {
 }
 
 .asteroid1950 {
-    top: 10%;
+    top: 1%;
     left: 45%;
-    width: 50px;
-    height: 50px;
-    background-image: url('img/bennu.png');
+    width: 100px;
+    height: 100px;
+    background-image: url('img/1959.png');
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     border-radius: 50%;
     position: relative;
-    box-shadow:
-        -20px 10px 20px rgba(255, 255, 255, 0.5);
     z-index: 10;
     cursor: pointer;
 }
 
 .info1950 {
     position: absolute;
-    top: -650%;
-    left: 130%;
-    width: 1000%;
+    top: -250%;
+    left: 120%;
+    width: 600%;
     height: auto;
     border: 2px solid gray;
     border-radius: 20px;
@@ -419,11 +551,79 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    z-index: 11;
+    z-index: 300;
 }
 
 .asteroid1950:hover .info1950 {
     opacity: 1;
+}
+
+.mercury-img {
+    top: 15%;
+    left: 4%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 90;
+}
+
+.mercury-large {
+    cursor: pointer;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 91;
+}
+
+.info-mercury {
+    position: absolute;
+    top: -10%;
+    left: 130%;
+    width: 130%;
+    height: auto;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(40, 41, 42, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.venus-img {
+    top: 15%;
+    left: 4%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 90;
+}
+
+.venus-large {
+    cursor: pointer;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 91;
+}
+
+.info-venus {
+    position: absolute;
+    top: -10%;
+    left: 130%;
+    width: 130%;
+    height: auto;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(40, 41, 42, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 100;
 }
 
 .text-one {
@@ -440,18 +640,6 @@ body {
     font-size: 20px;
 }
 
-.parametr {
-    position: absolute;
-    display: none;
-    top: 35%;
-    left: 45%;
-    width: 40%;
-    height: 40%;
-    border: 2px solid gray;
-    border-radius: 20px;
-    background-color: rgba(40, 41, 42, 0.5);
-    z-index: 102;
-}
 
 @keyframes fadeIn {
     from {

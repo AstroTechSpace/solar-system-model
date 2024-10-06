@@ -24,7 +24,8 @@ body {
     z-index: 600;
     animation: fadeIn 0.8s forwards;
 }
-.start1 {
+
+.view-3d {
     cursor: pointer;
     top: 3%;
     left: 90%;
@@ -41,7 +42,6 @@ body {
     width: 3%;
     position: absolute;
     z-index: 102;
-    animation: fadeIn 0.8s forwards;
 }
 
 .valli {
@@ -272,7 +272,7 @@ body {
     width: 96.5%;
     height: 95%;
     padding: 20px;
-    position: absolute;
+    position: relative;
     background-image: url('img/bg1.jpg');
     padding: 10px;
     border-radius: 10px;
@@ -488,7 +488,7 @@ body {
 }
 
 .asteroidBennu {
-    top: -70%;
+    top: 5%;
     left: 90%;
     width: 80px;
     height: 80px;
@@ -496,13 +496,13 @@ body {
     background-position: center;
     background-size: cover;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     cursor: pointer;
 }
 
 .infoBennu {
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: -850%;
     width: 800%;
     height: auto;
@@ -523,7 +523,7 @@ body {
 }
 
 .asteroid1950 {
-    top: 1%;
+    top: 80%;
     left: 45%;
     width: 100px;
     height: 100px;
@@ -531,7 +531,7 @@ body {
     background-position: center;
     background-size: contain;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     z-index: 10;
     cursor: pointer;
 }
@@ -616,9 +616,181 @@ body {
 .info-venus {
     position: absolute;
     top: -10%;
-    left: 130%;
-    width: 130%;
+    left: 110%;
+    width: 170%;
     height: auto;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(40, 41, 42, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.mars-img {
+    top: 15%;
+    left: 4%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 90;
+}
+
+.mars-large {
+    cursor: pointer;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 91;
+}
+
+.info-mars {
+    position: absolute;
+    top: -10%;
+    left: 120%;
+    width: 140%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(40, 41, 42, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.jupiter-img {
+    top: 15%;
+    left: 4%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 90;
+}
+
+.jupiter-large {
+    cursor: pointer;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 91;
+}
+
+.info-jupiter {
+    position: absolute;
+    top: -10%;
+    left: 120%;
+    width: 140%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(40, 41, 42, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.saturn-img {
+    top: 15%;
+    left: 4%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 90;
+}
+
+.saturn-large {
+    top: -50%;
+    left: 1%;
+    position: absolute;
+    cursor: pointer;
+    width: 450px;
+    height: 980px;
+    transform: rotateZ(100deg);
+    z-index: 91;
+
+}
+
+.info-saturn {
+    position: absolute;
+    top: -10%;
+    left: 120%;
+    width: 140%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(40, 41, 42, 0.5);
+    z-index: 100;
+}
+
+.uranus-img {
+    top: 15%;
+    left: 4%;
+    width: 480px;
+    height: 480px;
+    position: relative;
+    z-index: 90;
+}
+
+.uranus-large {
+    top: -20%;
+    cursor: pointer;
+    width: 330px;
+    height: auto;
+    position: absolute;
+}
+
+.info-uranus {
+    position: absolute;
+    top: -10%;
+    left: 100%;
+    width: 160%;
+    height: auto;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgba(40, 41, 42, 0.5);
+    transition: opacity 0.3s ease;
+    z-index: 100;
+}
+
+.neptune-img {
+    top: 15%;
+    left: 4%;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 90;
+}
+
+.neptune-large {
+    cursor: pointer;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: 91;
+}
+
+.info-neptune {
+    position: absolute;
+    top: 5%;
+    left: 120%;
+    width: 140%;
+    height: auto;
+    padding: 10px;
     border: 2px solid gray;
     border-radius: 20px;
     background-color: rgba(40, 41, 42, 0.5);

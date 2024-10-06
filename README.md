@@ -1,6 +1,6 @@
 # Solar System Model
 
-![Solar System](https://github.com/AstroTechSpace/solar-system-model/blob/main/assets/solar-system-banner.png)
+![Solar System](https://github.com/AstroTechSpace/solar-system-model/blob/master/client/images/solar-system-banner.png)
 
 ## Table of Contents
 

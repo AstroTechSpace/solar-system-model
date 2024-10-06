@@ -31,7 +31,7 @@ body {
     left: 90%;
     width: 3%;
     position: absolute;
-    z-index: 600;
+    z-index: 102;
     animation: fadeIn 0.8s forwards;
 }
 

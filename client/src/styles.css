@@ -35,6 +35,16 @@ body {
     animation: fadeIn 0.8s forwards;
 }
 
+.view-2d {
+    cursor: pointer;
+    top: 3%;
+    left: 80%;
+    width: 3%;
+    position: absolute;
+    z-index: 102;
+    animation: fadeIn 0.8s forwards;
+}
+
 .pause {
     cursor: pointer;
     top: 3%;

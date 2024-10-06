@@ -1,9 +1,13 @@
+body {
+    margin:0px;
+    padding:0px;
+}
 .planet-info {
     display: none;
     position: fixed;
-    left: 1%; 
-    top: 25%; 
-    width: 30%; 
+    left: 1%;
+    top: 25%;
+    width: 30%;
     z-index: 1;
 }
 
@@ -26,15 +30,15 @@
 
 .close-btn:hover,
 .close-btn:focus {
-    color: white; 
+    color: white;
     cursor: pointer;
 }
 
 h2 {
-    color: lightyellow; 
+    color: lightyellow;
 }
 
 p {
-    color: white; 
-    line-height: 1.5; 
+    color: white;
+    line-height: 1.5;
 }
